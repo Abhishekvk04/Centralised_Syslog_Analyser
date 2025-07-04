@@ -12,8 +12,8 @@ A comprehensive, production-ready logging pipeline using Docker Compose, integra
 - [Directory Structure](#directory-structure)
 - [Prerequisites](#prerequisites)
 - [Setup & Usage](#setup--usage)
-- [Testing the Pipeline](#testing-the-pipeline)
 - [Key Configuration Files](#key-configuration-files)
+- [Log Files](#log-files)
 - [OpenSearch Access](#opensearch-access)
 - [Troubleshooting](#troubleshooting)
 - [Notes](#notes)
@@ -152,6 +152,15 @@ Syslog Clients
 - **logstash/templates/syslog-template.json**: OpenSearch index template for syslog logs.
 - **syslog-ng/config/syslog-ng.conf**: syslog-ng sources, destinations, and log paths.
 - **test_syslog.py**: Python script to send test syslog messages via TCP/UDP.
+
+---
+
+## Log Files
+- **logs/**: Syslog logs (syslog format)
+- **logs/combined.log**: Contains all kind of logs (info, error, system, kernel etc)
+- **logs/messages.log**: Conatins message logs (info logs - tcp, udp etc)
+- **shared-logs/filebeat-input.json**: Filebeat logs (structured logs)
+- **full-logstash.log**: Logstash logs (structured with the syslog template)
 
 ---
 
