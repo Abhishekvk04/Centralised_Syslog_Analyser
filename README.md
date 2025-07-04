@@ -22,22 +22,7 @@ A comprehensive, production-ready logging pipeline using Docker Compose, integra
 
 ## Architecture Overview
 
-Syslog Clients  
-│  
-▼  
-**syslog-ng** (UDP/TCP 514)  
-│  
-▼  
-**filebeat** (reads JSON logs)  
-│  
-▼  
-**logstash** (parsing, enrichment)  
-│  
-▼  
-**OpenSearch** (storage, search)  
-│  
-▼  
-**OpenSearch Dashboards** (visualization)
+![flowchart](/Assests/flow.png)
 
 
 ---
